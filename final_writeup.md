@@ -30,6 +30,7 @@ Tha data will be stored in a SQL for faster and easy precessing.
 * The main algorithm was a predictive classification models that was able to give as much accuracy score as possible. I ended up with an R2 score of .7 with a decision threshold at .22 
 
 ![](./pics/cmat.png)
+![](./pics/bi_pm.png)
 
 * For the purpose of the business, I ensured that we catch as much churns, so we will make recall and f2 score our priority. Though we do not want to predict churn when a customer will as we do not want to waste resources on customers the are not going to churn, but unability to predict churn will potentialy cost the business money as the business spends a lot of money to gain new customers and not so much to retain existing ones. 
 below is a few coparable models that were tried including the chosen model-Random forest with hyper perameter tuning
