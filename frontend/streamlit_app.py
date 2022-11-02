@@ -49,7 +49,10 @@ def run():
         }
 
     if st.button('Predict'):
-        response = requests.post('http://0.0.0.0:80/predict', json=data)
+        s = requests.Session()
+        response =  s.post('http://fastapi-server:80/predict', json=data)
+        # response = requests.get('http://fastapi-server:80')
+        print(response)
         prediction = response.text
         st.success(f'The prediction form model: {prediction}')
 

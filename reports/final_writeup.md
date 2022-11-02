@@ -14,7 +14,7 @@ Customer churn refers to the process of identifying customer/ clients who will t
 ### Data 
 * The data for this project was obtained from a public data bank source - Kaggle.com and can be found [here](https://www.kaggle.com/blastchar/telco-customer-churn)
 * Data will contain about 7,000 observations and some 21 features to explore.
-* One individual row in the data singifies one unique observation of a customer's behavior (features)  
+* One individual row in the data signifies one unique observation of a customer's behavior (features)  
 Tha data will be stored in a SQL for faster and easy precessing.
 
 ### Algorithm
@@ -23,7 +23,7 @@ Tha data will be stored in a SQL for faster and easy precessing.
 
 ![](./pics/uni_sc.png)
 
- We can also see from the barcharts below that, while performing a univariate analysis on gender gave little insights, infact almost even ratio, bivariate analysis reveals that males with electronic check payment type churns the most.
+ We can also see from the bar charts below that, while performing a univariate analysis on gender gave little insights, infact almost even ratio, bivariate analysis reveals that males with electronic check payment type churns the most.
 
 ![](./pics/uni_maleVfemale.png)
 
@@ -46,7 +46,8 @@ below is a few coparable models that were tried including the chosen model-Rando
   * SQL
   * Scikit-learn
 
-### Future work
+### Api
+The project has been packaged as an api with flask and deployed to the docker hub.
  * Deployment
    * Flask
    * Docker 

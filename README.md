@@ -1,10 +1,33 @@
-Customer Churn Project
-==============================
+# Customer Churn Project
 
-Metis classification project where I predict the likelihood of a customer exiting the company given some data
+Customer churn refers to the process of identifying customer/ clients who will terminate their relations with an organization. It is very important aspect of an organization as it helps to measure the growth of the company. Hence, The purpose of this project is to build a predictive model to determine if a given customer will churn or not based on the customers historical data available, using various machine learning algorithms and techniques <br><br>
 
-Project Structure
-------------
+## Data Description
+
+- The data for this project will be obtained from a public data bank source - Kaggle.com and can be found [here](https://www.kaggle.com/blastchar/telco-customer-churn)
+- Data will contain about 50,000 observations and some 30 features to explore.
+- One individual row in the data signifies one unique observation of a customer's behavior (features)
+- Tha data will be stored in a SQL database for faster and easy accessibility
+
+## Test the Api:
+
+The finished api can be found on docker hub via this [link](docker.io/phade160/customer-churn) or can be directly pulled with the following commands:<br>
+
+<h3>Pull:</h3>
+
+    docker push phade160/customer-churn:latest
+
+<h3>run the image in a container:</h3>
+
+    docker run [--detach] -p 80:80 phade160/customer-churn
+
+<h3>Web browser</h3>
+
+    http://0.0.0.0/docs
+
+
+
+## Project Structure
 
     ├── README.md               <- The top-level README for developers using this project.
     ├── data
@@ -31,51 +54,28 @@ Project Structure
     ├── requirements.txt        <- The requirements file for reproducing the analysis environment, e.g.
     │                              generated with `pip freeze > requirements.txt`
     │
-    ├── src                     <- Source code for use in this project.
-    │   └── customer-churn
-    │       ├── __init__.py     <- Makes src a Python module
-    │       │
-    │       ├── config.py       <- Configuration file for some global variables
-    │       │
-    │       ├── data            <- Scripts to download or generate data
-    │       │   └── make_dataset.py
-    │       │
-    │       ├── features        <- Scripts to turn raw data into features for modeling
-    │       │   └── build_features.py
-    │       │
-    │       ├── models          <- Scripts to train models and then use trained models to make
-    │       │   │                 predictions
-    │       │   ├── predict.py
-    │       │   └── train.py
-    │       │
-    │       └── visualization   <- Scripts to create exploratory and results oriented visualizations
-    │           └── visualize.py
     │
-    ├── tests                   <- Test scripts for unit testing (e.g. using pytest), 
+    ├── tests                   <- Test scripts for unit testing (e.g. using pytest),
     │                              performance and load testing of the API
     │
-    ├── api.py                  <- Flask API script
+    ├── app                     <- Contains all files and logic related to api building. eg. a main.py and BaseModel class extension
+    │   └── main.py             <- Fastapi Api file
     │
     └── .gitignore
 
-
 ### Installing development requirements
-------------
+
+---
 
     pip install -r requirements.txt
 
-### Running the tests
-------------
-
-    pytest tests
-
 ### Build documentation using Sphinx
-------------
+
+---
 
     cd docs/
     make html
 
-
---------
+---
 
 <p><small>Project created using the <a target="_blank" href="https://github.com/sujitahirrao/flask-ai-api-template">Flask AI API Template</a>.</small></p>

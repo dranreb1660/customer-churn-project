@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  fastapi-server:
+    image: phade160/customer-churn
+    ports:
+      - "80:80"
+  streamlit-server:
+    image: "phade160/streamlit-app"
+    ports:
+      - "8501:8501"
