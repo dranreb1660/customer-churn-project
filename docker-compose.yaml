@@ -1,10 +1,16 @@
 version: "3.9"
 services:
   fastapi-server:
-    image: phade160/customer-churn
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "80:80"
+    container_name: fastapi-server
   streamlit-server:
-    image: "phade160/streamlit-app"
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     ports:
       - "8501:8501"
+    container_name: streamlit-server

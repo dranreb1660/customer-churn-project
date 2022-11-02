@@ -25,11 +25,11 @@ The finished api can be found on docker hub via this [link](docker.io/phade160/c
 
     http://0.0.0.0/docs
 
-
-
 ## Project Structure
 
     ├── README.md               <- The top-level README for developers using this project.
+    ├── Dockerfile              <- Dockerfile for building image
+    ├── docker-compose.yaml     <- Docker-compose yaml file to build and run images
     ├── data
     │   ├── external            <- Data from third party sources.
     │   ├── interim             <- Intermediate data that has been transformed.
